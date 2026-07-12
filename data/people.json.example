@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sample-person-1",
+    "name": "山田太郎",
+    "relationship": "父",
+    "birthDate": "1965-03-10",
+    "notes": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-person-2",
+    "name": "山田花子",
+    "relationship": "母",
+    "birthDate": "1968-07-22",
+    "notes": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-person-3",
+    "name": "山田一郎",
+    "relationship": "甥",
+    "birthDate": "2020-04-02",
+    "notes": "4月2日生まれなので学齢は翌年度扱い",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-person-4",
+    "name": "名無しの権兵衛",
+    "relationship": "友人",
+    "birthDate": null,
+    "notes": "誕生日不明なサンプル。誕生日未登録の人物はダッシュボードに表示されません",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+]

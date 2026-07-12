@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sample-gift-1",
+    "personId": "sample-person-1",
+    "eventType": "birthday",
+    "eventDate": "2025-03-10",
+    "item": "ネクタイ",
+    "amount": 5000,
+    "location": "伊勢丹",
+    "memo": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-gift-2",
+    "personId": "sample-person-2",
+    "eventType": "mothers_day",
+    "eventDate": "2025-05-11",
+    "item": "花束",
+    "amount": 3000,
+    "location": "",
+    "memo": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-gift-3",
+    "personId": "sample-person-4",
+    "eventType": "wedding",
+    "eventDate": "2024-11-03",
+    "item": "御祝儀",
+    "amount": 30000,
+    "location": "",
+    "memo": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "sample-gift-4",
+    "personId": "sample-person-1",
+    "eventType": "oseibo",
+    "eventDate": "2024-12-10",
+    "item": "ハム詰め合わせ",
+    "amount": 5400,
+    "location": "デパート",
+    "memo": "",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+]
