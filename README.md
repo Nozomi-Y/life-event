@@ -21,4 +21,12 @@ npm run dev
 - `/history` 履歴一覧: 贈答記録を日付順に表示・絞り込み
 - `/gifts/new` 贈答記録の追加
 - `/people` 親戚の登録・編集
-- `/import` NotionからエクスポートしたCSVの取り込み
+- `/import` Notionからの過去の履歴の取り込み(テキスト貼り付け / CSVファイル)
+
+## スクリーンショット
+
+### 贈答記録を追加
+![贈答記録を追加画面](docs/images/add-gift.png)
+
+### インポート(テキスト貼り付け)
+![インポート画面](docs/images/import.png)
