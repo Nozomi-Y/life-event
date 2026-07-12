@@ -1,15 +1,15 @@
-import ImportClient from "@/components/ImportClient";
+import ImportModeTabs from "@/components/ImportModeTabs";
 
 export default function ImportPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold text-ink">CSVインポート</h1>
+        <h1 className="text-xl font-semibold text-ink">インポート</h1>
         <p className="mt-1 text-sm text-ink/60">
-          Notionからエクスポートした過去の履歴CSVを取り込みます。列の対応を確認してから実行してください。
+          Notionからの過去の履歴を取り込みます。整ったCSVがない場合は「テキスト貼り付け」で箇条書きのメモをそのまま貼り付けられます。
         </p>
       </div>
-      <ImportClient />
+      <ImportModeTabs />
     </div>
   );
 }

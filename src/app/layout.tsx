@@ -15,8 +15,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="min-h-screen bg-paper text-ink font-sans">
-        <Nav />
-        <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
+        <div className="flex min-h-screen">
+          <Nav />
+          <main className="min-w-0 flex-1 px-8 py-8">
+            <div className="mx-auto max-w-4xl">{children}</div>
+          </main>
+        </div>
       </body>
     </html>
   );

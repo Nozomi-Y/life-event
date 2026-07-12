@@ -15,31 +15,29 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-sage-200 bg-paper/80 backdrop-blur sticky top-0 z-10">
-      <div className="mx-auto max-w-5xl px-6 py-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <span className="font-semibold text-sage-600 tracking-wide">
-          贈答管理
-        </span>
-        <nav className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
-          {LINKS.map((link) => {
-            const active =
-              link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={
-                  active
-                    ? "text-sage-600 font-medium"
-                    : "text-ink/70 hover:text-sage-600 transition-colors"
-                }
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+    <aside className="sticky top-0 h-screen w-56 shrink-0 overflow-y-auto border-r border-sage-200 bg-white/60 px-4 py-6">
+      <div className="mb-6 px-2 font-semibold text-sage-600 tracking-wide">
+        贈答管理
       </div>
-    </header>
+      <nav className="flex flex-col gap-1 text-sm">
+        {LINKS.map((link) => {
+          const active =
+            link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={
+                active
+                  ? "rounded-md bg-sage-100 px-3 py-2 font-medium text-sage-600"
+                  : "rounded-md px-3 py-2 text-ink/70 transition-colors hover:bg-sage-50 hover:text-sage-600"
+              }
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </nav>
+    </aside>
   );
 }

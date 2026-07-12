@@ -71,9 +71,18 @@ export default function GiftForm({ people, initialGift }: Props) {
     router.refresh();
   }
 
+  function handleKeyDown(e: React.KeyboardEvent<HTMLFormElement>) {
+    // 日本語入力の変換確定Enterがそのままフォーム送信してしまうのを防ぐ
+    // (テキストエリアの改行入力は妨げない)
+    if (e.key === "Enter" && (e.target as HTMLElement).tagName !== "TEXTAREA") {
+      e.preventDefault();
+    }
+  }
+
   return (
     <form
       onSubmit={handleSubmit}
+      onKeyDown={handleKeyDown}
       className="grid grid-cols-1 gap-3 rounded-lg border border-sage-200 bg-white/60 p-4 sm:grid-cols-2"
     >
       <label className="flex flex-col gap-1 text-sm">
