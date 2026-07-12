@@ -6,6 +6,8 @@ export type EventType =
   | "oseibo"
   | "entrance"
   | "graduation"
+  | "mothers_day"
+  | "fathers_day"
   | "other";
 
 export interface Person {

@@ -17,14 +17,6 @@ interface EditableRow {
   memo: string;
 }
 
-const SAMPLE_PLACEHOLDER = `- 202512 まっこばちゃん 着付け
-    にまん
-- 20251221 アキラ結婚式御祝儀
-    30000
-- 20251204 源一郎 お歳暮
-    5400円
-    伊藤ハム 伝承`;
-
 export default function TextImportClient() {
   const router = useRouter();
   const [text, setText] = useState("");
@@ -72,7 +64,7 @@ export default function TextImportClient() {
         eventType: r.eventType,
         eventDate: r.eventDate,
         item: r.item,
-        amount: r.amount ? Number(r.amount) : null,
+        amount: r.amount.trim() ? Number(r.amount.replace(/,/g, "")) : null,
         location: r.location,
         memo: r.memo,
       }));
@@ -109,7 +101,6 @@ export default function TextImportClient() {
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder={SAMPLE_PLACEHOLDER}
             rows={10}
             className="mt-2 block w-full rounded border border-sage-200 bg-white px-3 py-2 font-mono text-xs"
           />
@@ -194,7 +185,8 @@ export default function TextImportClient() {
                   </td>
                   <td className="px-2 py-1">
                     <input
-                      type="number"
+                      type="text"
+                      inputMode="numeric"
                       value={row.amount}
                       onChange={(e) => updateRow(i, { amount: e.target.value })}
                       className="w-24 rounded border border-sage-200 px-2 py-1"

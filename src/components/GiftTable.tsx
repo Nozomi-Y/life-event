@@ -40,7 +40,7 @@ export default function GiftTable({ gifts, peopleById }: Props) {
             <tr key={gift.id} className="border-b border-sage-100 last:border-b-0">
               <td className="whitespace-nowrap px-4 py-2">{gift.eventDate}</td>
               <td className="px-4 py-2">{peopleById[gift.personId]?.name ?? "(削除済み)"}</td>
-              <td className="px-4 py-2">{EVENT_TYPE_LABELS[gift.eventType]}</td>
+              <td className="whitespace-nowrap px-4 py-2">{EVENT_TYPE_LABELS[gift.eventType]}</td>
               <td className="px-4 py-2">{gift.item || "-"}</td>
               <td className="whitespace-nowrap px-4 py-2">{formatAmount(gift.amount)}</td>
               <td className="px-4 py-2">{gift.location || "-"}</td>

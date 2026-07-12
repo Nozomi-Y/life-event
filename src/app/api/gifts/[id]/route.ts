@@ -13,6 +13,8 @@ const giftUpdateSchema = z.object({
       "oseibo",
       "entrance",
       "graduation",
+      "mothers_day",
+      "fathers_day",
       "other",
     ])
     .optional(),

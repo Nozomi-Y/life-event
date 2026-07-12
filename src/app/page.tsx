@@ -4,14 +4,16 @@ import { listPeople } from "@/lib/store";
 
 export default function DashboardPage() {
   const people = listPeople();
-  const occasions = getUpcomingOccasions(people, new Date()).slice(0, 30);
+  const occasions = getUpcomingOccasions(people, new Date()).filter(
+    (o) => o.daysUntil <= 365
+  );
 
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-xl font-semibold text-ink">次のイベント</h1>
         <p className="mt-1 text-sm text-ink/60">
-          本日時点で、直近の誕生日・入学式/卒業式・長寿祝いを近い順に表示しています。
+          本日から1年以内の誕生日・入学式/卒業式・長寿祝いを近い順に表示しています。
         </p>
       </div>
 

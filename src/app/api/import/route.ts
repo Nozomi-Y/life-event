@@ -14,6 +14,8 @@ const importRowSchema = z.object({
     "oseibo",
     "entrance",
     "graduation",
+    "mothers_day",
+    "fathers_day",
     "other",
   ]),
   eventDate: z.string().min(1),

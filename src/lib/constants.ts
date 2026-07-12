@@ -8,6 +8,8 @@ export const EVENT_TYPE_LABELS: Record<EventType, string> = {
   oseibo: "お歳暮",
   entrance: "入学祝い",
   graduation: "卒業祝い",
+  mothers_day: "母の日",
+  fathers_day: "父の日",
   other: "その他",
 };
 

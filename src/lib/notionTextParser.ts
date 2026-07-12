@@ -113,6 +113,8 @@ function guessEventType(text: string): EventType {
   if (/お中元/.test(text)) return "ochugen";
   if (/入学|入園/.test(text)) return "entrance";
   if (/卒業/.test(text)) return "graduation";
+  if (/母の日/.test(text)) return "mothers_day";
+  if (/父の日/.test(text)) return "fathers_day";
   return "other";
 }
 

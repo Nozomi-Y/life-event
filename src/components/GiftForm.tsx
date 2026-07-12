@@ -14,7 +14,7 @@ export default function GiftForm({ people, initialGift }: Props) {
   const router = useRouter();
   const isEdit = Boolean(initialGift);
 
-  const [personId, setPersonId] = useState(initialGift?.personId ?? people[0]?.id ?? "");
+  const [personId, setPersonId] = useState(initialGift?.personId ?? "");
   const [eventType, setEventType] = useState<EventType>(initialGift?.eventType ?? "birthday");
   const [eventDate, setEventDate] = useState(
     initialGift?.eventDate ?? new Date().toISOString().slice(0, 10)
@@ -40,7 +40,7 @@ export default function GiftForm({ people, initialGift }: Props) {
       eventType,
       eventDate,
       item,
-      amount: amount ? Number(amount) : null,
+      amount: amount.trim() ? Number(amount.replace(/,/g, "")) : null,
       location,
       memo,
     };
@@ -92,7 +92,9 @@ export default function GiftForm({ people, initialGift }: Props) {
           onChange={(e) => setPersonId(e.target.value)}
           className="rounded border border-sage-200 bg-white px-3 py-2"
         >
-          {people.length === 0 && <option value="">(未登録)</option>}
+          <option value="">
+            {people.length === 0 ? "(未登録)" : "選択してください"}
+          </option>
           {people.map((p) => (
             <option key={p.id} value={p.id}>
               {p.name}
@@ -128,11 +130,12 @@ export default function GiftForm({ people, initialGift }: Props) {
       <label className="flex flex-col gap-1 text-sm">
         金額(円)
         <input
-          type="number"
-          min={0}
+          type="text"
+          inputMode="numeric"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           className="rounded border border-sage-200 bg-white px-3 py-2"
+          placeholder="5000"
         />
       </label>
       <label className="flex flex-col gap-1 text-sm">
