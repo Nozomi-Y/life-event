@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# personal data (contains relatives' names/birthdays/amounts — never commit)
+/data/*.json
+
+# misc
+.DS_Store
+*.pem
+.env*
+npm-debug.log*
+
+# local Claude Code settings (not project source)
+.claude/settings.local.json
